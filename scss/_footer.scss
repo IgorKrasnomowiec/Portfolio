@@ -1,0 +1,171 @@
+footer {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  margin-top: 10rem;
+  color: white;
+}
+.footter--container {
+  // margin: 0 auto;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "grid__footer3  grid__footer2 grid__footer1 ";
+}
+
+.copyrights {
+  color: white;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.grid__area1 {
+  grid-area: grid__footer1;
+  display: flex;
+  flex-direction: column;
+}
+.grid__area2 {
+  grid-area: grid__footer2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.grid__area3 {
+  grid-area: grid__footer3;
+  color: white;
+  position: relative;
+  h4 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .double__arrow__down {
+    font-size: 3rem;
+    position: absolute;
+    top: 35%;
+    left: 46%;
+  }
+}
+
+.form__container--form {
+  margin: 0 auto;
+  position: relative;
+  margin-right: 3rem;
+  width: 40%;
+  p {
+    font-family: $main__font;
+  }
+}
+.footter__email {
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 20%;
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  color: rgb(0, 0, 0);
+  padding-top: 1rem;
+  border: none;
+  border-bottom: 2px solid grey;
+  font-size: 1rem;
+}
+.footter__email:focus ~ .input,
+.footter__email:valid ~ .input {
+  transform: translateY(-20px);
+  opacity: 0.6;
+}
+
+.input {
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  margin-left: 0.2rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  color: rgb(0, 0, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.underline {
+  position: absolute;
+  top: 24%;
+  left: 0%;
+  height: 0.2rem;
+  width: 100%;
+  background: red;
+}
+.underline::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgb(182, 162, 162);
+  transform: scaleX(0);
+  transition: 0.4s ease-in;
+}
+.footter__email:focus ~ .underline::before,
+.footter__email:valid ~ .underline::before {
+  transform: scaleX(1);
+}
+.textarea {
+  margin-left: 0.2rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+//btn footer
+.footter__button {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  background: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  box-shadow: 1px 1px 1px 1px red;
+  border: none;
+}
+
+//
+
+.display__none {
+  display: none;
+}
+.radar__pic {
+  position: relative;
+  max-height: 20rem;
+  margin-left: 4rem;
+}
+
+#map {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  height: 13.5rem;
+  width: 13.3rem;
+  border-radius: 50%;
+  z-index: 20;
+}
+.gogeta {
+  height: 15rem;
+}
+
+.send__message {
+  display: none;
+  justify-content: flex-end;
+  position: fixed;
+  top: 26%;
+  left: 23%;
+  width: 50%;
+  height: 50%;
+  background: white;
+  background-image: url("../img/doggothanks.gif");
+  background-size: 52%;
+}
+.exit {
+  position: absolute;
+  left: 96%;
+  font-size: 2rem;
+}

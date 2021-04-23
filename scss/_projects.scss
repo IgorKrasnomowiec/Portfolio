@@ -1,0 +1,136 @@
+.sec__3 {
+  position: relative;
+  margin-top: 17rem;
+}
+
+.imageDB4 {
+  position: absolute;
+  top: 20%;
+  left: -1%;
+  width: 30%;
+  height: auto;
+  clip-path: polygon(11% 9%, 65% 17%, 73% 50%, 70% 100%, 10% 100%, 10% 53%);
+  //
+  transform: translateX(-30rem);
+}
+.imageDB5 {
+  position: absolute;
+  top: 29%;
+  left: 47%;
+  width: 50%;
+  height: auto;
+  clip-path: polygon(59% 14%, 100% 0, 100% 45%, 100% 100%, 58% 97%, 72% 48%);
+  // animation: opacityTo1 3s ease-in;
+  opacity: 0;
+}
+.imageDB6 {
+  position: absolute;
+  top: 68%;
+  left: -3%;
+  width: 70%;
+  height: auto;
+  clip-path: polygon(11% 7%, 63% 21%, 73% 50%, 65% 65%, 6% 87%, 6% 50%);
+}
+.sec__3::before {
+  content: "";
+  width: 28rem;
+  height: 1px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  background-color: $light__grey;
+}
+
+.sec__3--container {
+  text-align: center;
+  .my__projects--h3 {
+    font-size: 6rem;
+  }
+  p {
+    margin-top: 1rem;
+    color: rgb(194, 193, 193);
+    font-size: 2rem;
+    padding: 3rem;
+    width: 90%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 23%,
+      rgba(44, 44, 44, 1) 46%
+    );
+    border: 4px solid black;
+    margin: 0 auto;
+    box-shadow: yellowgreen;
+    box-shadow: 0 9px 16px -2px black;
+  }
+}
+
+.my__projects--h3 {
+  font-family: $main__font;
+}
+.sec__3__grid--container {
+  display: grid;
+  margin: 0 auto;
+  margin-top: 7rem;
+  gap: 1rem;
+  width: 50%;
+  height: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "box--grid-1 content1 ."
+    "content2 box--grid-2 .";
+}
+.sec__3__grid--box1 {
+  grid-area: box--grid-1;
+  border: 5px solid black;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    cursor: none;
+  }
+}
+.sec__3__grid--box2 {
+  grid-area: box--grid-2;
+  border: 5px solid black;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    cursor: none;
+  }
+}
+.box1__content {
+  grid-area: content1;
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: center;
+}
+.box2__content {
+  grid-area: content2;
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: center;
+}
+
+@keyframes opacityTo1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,602 @@
+body {
+  background: linear-gradient(-45deg, #5a5653, #352f31, #82898b, #727c79);
+  background-size: 400% 400%;
+  animation: aaa 5s ease infinite;
+  cursor: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 90%;
+  border-right: 1rem solid black;
+  border-left: 1rem solid black;
+  border-top: 1rem solid black;
+  box-shadow: 1rem 1rem 10rem 1rem #1c1c4d;
+  background: $header-colour;
+
+  background-image: url("../img/161127-grey-and-white-grunge-texture-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section__1 {
+  position: relative;
+}
+.nav__bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  min-height: 12rem;
+  background: rgb(0, 0, 0);
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 23%,
+    rgba(44, 44, 44, 1) 39%,
+    rgba(98, 98, 98, 1) 56%,
+    rgb(134, 134, 134) 74%
+  );
+  box-shadow: 0rem 1rem 5rem 3rem rgb(0 0 0 / 83%);
+}
+.header {
+  position: relative;
+}
+.header__nav {
+  display: flex;
+  justify-content: center;
+  margin-left: 10rem;
+  font-size: 4rem;
+  gap: 3rem;
+  max-width: 93rem;
+  width: 100%;
+  height: auto;
+  list-style: none;
+  line-height: 9rem;
+  letter-spacing: 0.2rem;
+  font-family: "Bangers";
+
+  li {
+    text-align: center;
+    margin-right: 2rem;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(207, 86, 86);
+  }
+  .home::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(95, 92, 92);
+    transition: width 0.3s;
+  }
+  .home:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+    color: red;
+    cursor: none;
+  }
+
+  .about::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(95, 92, 92);
+    transition: width 0.3s;
+  }
+
+  .about:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+    color: red;
+    cursor: none;
+  }
+
+  .project::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(95, 92, 92);
+    transition: width 0.3s;
+  }
+  .project:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+    cursor: none;
+    color: red;
+  }
+}
+.header-sticky {
+  position: fixed;
+  top: 0%;
+  margin-left: -6rem;
+  width: 100%;
+  max-width: 118rem;
+  z-index: 20;
+  opacity: 0.8;
+}
+
+.dragon__ball__logo {
+  // display: none;
+  position: absolute;
+  top: -108%;
+  left: 3%;
+  min-width: 16rem;
+  z-index: 5;
+  max-width: 12rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.aura {
+  display: none;
+  position: absolute;
+  top: -4%;
+  left: 6%;
+  height: 12rem;
+  width: 14rem;
+}
+
+.home__content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-bottom: 9rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home__content--left {
+  align-items: center;
+  z-index: 4;
+  width: 100%;
+  height: auto;
+  font-size: 3rem;
+  font-family: "Bangers";
+  letter-spacing: 1rem;
+  .name__surname {
+    position: absolute;
+    top: 35%;
+    left: 22%;
+    width: 56%;
+    height: auto;
+    margin-top: 1.5rem;
+  }
+  .web__developer {
+    text-align: center;
+    font-size: 8rem;
+    width: 100%;
+    height: auto;
+    margin-top: 24rem;
+    // transform: scale(3);
+    color: rgb(221, 38, 38);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+}
+
+.home__content--right {
+  width: 6%;
+  height: auto;
+  .svg__container {
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    gap: 3rem;
+    margin-top: 8rem;
+    // margin-right: 2rem;
+    a {
+      color: black;
+      cursor: none;
+      z-index: 20;
+    }
+  }
+}
+#section__2 {
+  width: 100%;
+  height: auto;
+  color: red;
+}
+
+.about__me--btn:hover {
+  transform: perspective(500px) rotateY(15deg);
+  text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.about__me--btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, white, transparent);
+  left: -100%;
+  transition: 0.5s;
+}
+
+.about__me--btn:hover::before {
+  left: 100%;
+}
+.emplty {
+  height: 12rem;
+  width: 10rem;
+  z-index: -1;
+}
+
+//ANIMATIONS
+
+// Slide on 3 section
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-5rem);
+    transform: translateY(-5rem);
+  }
+}
+
+//background moving
+@keyframes aaa {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// rotation on git, link,fb insta
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//
+//yellow ball moving
+
+@keyframes ball7__moving {
+  0% {
+    top: -53%;
+    left: 0%;
+  }
+
+  100% {
+    top: 70%;
+    left: 92%;
+  }
+}
+@keyframes ball6__moving {
+  0% {
+    top: -53%;
+    left: 0%;
+  }
+
+  100% {
+    top: 70%;
+    left: 80%;
+  }
+}
+@keyframes ball5__moving {
+  0% {
+    top: -53%;
+    left: 0%;
+  }
+
+  100% {
+    top: 70%;
+    left: 69%;
+  }
+}
+@keyframes ball4__moving {
+  0% {
+    top: -53%;
+    left: 0%;
+  }
+
+  100% {
+    top: 70%;
+    left: 58%;
+  }
+}
+@keyframes ball3__moving {
+  0% {
+    top: -53%;
+    left: 0%;
+  }
+
+  100% {
+    top: 70%;
+    left: 47%;
+  }
+}
+@keyframes ball2__moving {
+  0% {
+    top: -53%;
+    left: 0%;
+  }
+
+  100% {
+    top: 70%;
+    left: 37%;
+  }
+}
+
+@keyframes ball1__moving {
+  0% {
+    top: -53%;
+    left: 0%;
+  }
+
+  100% {
+    top: 70%;
+    left: 26%;
+  }
+}
+.ball7 {
+  height: 3em;
+  position: absolute;
+  top: -80%;
+  left: 0%;
+  z-index: 11;
+  animation-name: ball7__moving;
+  animation-delay: 2.5s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.ball6 {
+  height: 3em;
+  position: absolute;
+  top: -80%;
+  left: 0%;
+  z-index: 11;
+  animation-name: ball6__moving;
+  animation-delay: 3s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.ball5 {
+  height: 3em;
+  position: absolute;
+  top: -80%;
+  left: 0%;
+  z-index: 11;
+  animation-name: ball5__moving;
+  animation-delay: 3.5s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.ball4 {
+  height: 3em;
+  position: absolute;
+  top: -80%;
+  left: 0%;
+  z-index: 11;
+  animation-name: ball4__moving;
+  animation-delay: 4s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.ball3 {
+  height: 3em;
+  position: absolute;
+  top: -80%;
+  left: 0%;
+  z-index: 11;
+  animation-name: ball3__moving;
+  animation-delay: 4.5s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.ball2 {
+  height: 3em;
+  position: absolute;
+  top: -80%;
+  left: 0%;
+  z-index: 11;
+  animation-name: ball2__moving;
+  animation-delay: 5s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.ball1 {
+  height: 3em;
+  position: absolute;
+  top: -80%;
+  left: 0%;
+  z-index: 11;
+  animation-name: ball1__moving;
+  animation-delay: 5.5s;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.scale__low {
+  transform: scale(1.1);
+}
+
+@keyframes brathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+.rotate-center {
+  animation: rotate-center 1s ease-out;
+}
+
+.bcColor {
+  background-color: red;
+}
+
+.slide-top {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.left__fixed {
+  position: fixed;
+  top: 20%;
+  left: 0%;
+  width: 5rem;
+  height: 5rem;
+  gap: 1rem;
+
+  p {
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+  }
+}
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  transition-duration: 20ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -9px;
+  left: -9px;
+  border: 8px solid grey;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+@keyframes cursorAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.expand {
+  animation: cursorAnim3 0.5s forwards;
+  border: 1px solid red;
+}
+.anim {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    animation: showImg 0.8s ease;
+  }
+  img {
+    opacity: 0;
+    animation: animateImg 0.7s forwards;
+  }
+}
+
+.imageDB {
+  position: absolute;
+  top: 9%;
+  left: 0%;
+  width: 37%;
+  height: auto;
+  clip-path: polygon(
+    100% 0,
+    95% 34%,
+    82% 37%,
+    94% 76%,
+    68% 92%,
+    53% 100%,
+    22% 86%,
+    0 86%,
+    3% 3%
+  );
+}
+.imageDB2 {
+  position: absolute;
+  top: 18%;
+  left: 52%;
+  width: 48%;
+  height: auto;
+  clip-path: polygon(49% 35%, 75% -41%, 77% 25%, 75% 63%, 86% 88%, 26% 41%);
+}
+.imageDB3 {
+  position: absolute;
+  top: 98%;
+  left: 1%;
+  width: 70%;
+  height: auto;
+  clip-path: polygon(0 0, 81% 23%, 86% 38%, 93% 50%, 28% 68%, 8% 73%);
+}
+.burger {
+  display: none;
+}
+
+@keyframes fallingDragonBalls {
+  0% {
+  }
+}
