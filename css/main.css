@@ -1517,6 +1517,11 @@ footer {
     left: 29%;
   }
 }
+@media screen and (max-width: 1289px) {
+  .header__nav {
+    font-size: 3.2rem;
+  }
+}
 @media screen and (max-width: 1276px) {
   .wrapper {
     margin: 0 auto;
