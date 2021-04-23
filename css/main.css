@@ -1289,6 +1289,7 @@ footer {
   background: white;
   background-image: url("../img/doggothanks.gif");
   background-size: 52%;
+  z-index: 200;
 }
 
 .exit {
