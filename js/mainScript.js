@@ -78,18 +78,6 @@ iconList.forEach((icon) => {
     }
   });
 });
-// smooth moving links  HOME, ABOUT ME and PROJECTS to particular direction
-// const nav__link = document.querySelectorAll(`.nav__link`);
-// nav__link.forEach((link) => {
-//   link.addEventListener(`click`, function (e) {
-//     e.preventDefault();
-//     const id = this.getAttribute(`href`);
-//     console.log(id);
-//     document.querySelector(id).scrollIntoView({ behavior: `smooth` });
-//   });
-// });
-// smooth moving links like HOME, ABOUT ME and PROJECTS to particular direction
-//thats more efficient way to do because eventListener is on UL not on all elements LI---> its more efficient
 
 document.querySelector(`.header__nav`).addEventListener(`click`, function (e) {
   e.preventDefault();
@@ -99,11 +87,8 @@ document.querySelector(`.header__nav`).addEventListener(`click`, function (e) {
   }
 });
 
-// Implementing Intersection Observer API, Events happening after seeing on window
-// obsCallback function will be called each time that observed element is intersecting the root element at the threshold I defined
 //Reveal sections
 const allSec = document.querySelectorAll(`.allSections`);
-
 const revealSection = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
@@ -120,9 +105,7 @@ allSec.forEach(function (section) {
 
 // map footter
 navigator.geolocation.getCurrentPosition(
-  //logging when find position
   function (position) {
-    //position is an object with all latitude and longitude information
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     console.log(`https://www.google.com/maps/@${latitude},${longitude}`);
@@ -184,8 +167,6 @@ section1Observer.observe(homeContent);
 //cursor
 const cursor = document.querySelector(`.cursor`);
 document.addEventListener(`mousemove`, function (e) {
-  // const { screenX, screenY } = e;
-  // console.log(screenX, screenY);
   cursor.setAttribute(
     "style",
     "top: " + (e.pageY - 10) + "px;left:" + (e.pageX - 10) + "px;"

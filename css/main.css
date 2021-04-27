@@ -2448,4 +2448,31 @@ footer {
     margin-left: 5rem;
   }
 }
+body {
+  background: red;
+}
+
+.wrapper2 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.box1 {
+  background: blue;
+  display: flex;
+  justify-content: space-between;
+}
+.box2 {
+  background: #966262;
+}
+
+.box3 {
+  background: #270808;
+}
+
+.box4 {
+  background: #5665a7;
+}
 /*# sourceMappingURL=main.css.map */
